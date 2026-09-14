@@ -1,0 +1,53 @@
+\documentclass[bachelor,substylefile=VolSU.rtx]{disser}
+
+\usepackage[
+  a4paper,mag=1000,
+  left=3.0cm,right=1cm,top=2cm,bottom=2cm,
+  headsep=0.7cm,footskip=1cm
+]{geometry}
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{caption}
+\usepackage[colorlinks=false,breaklinks]{hyperref}
+\usepackage[
+  citestyle=gost-numeric,
+  style=gost-numeric,
+  natbib=true,
+  urldate=long,
+  sorting=none,
+  autolang=other
+]{biblatex}
+\usepackage{csquotes}
+
+\addbibresource{Bib.bib}
+\pagestyle{footcenter}
+\chapterpagestyle{footcenter}
+\emergencystretch=5em
+
+\DeclareCaptionLabelSeparator{dash}{ -- }
+\captionsetup{justification=centering,labelsep=dash}
+\captionsetup[table]{skip=0pt,singlelinecheck=off}
+
+\begin{document}
+\input{Title.tex}
+
+\renewcommand\contentsname{Содержание}
+\tableofcontents
+
+\input{Intro.tex}
+\input{Chapter1.tex}
+\input{Chapter2.tex}
+\input{Conclusions.tex}
+
+\printbibliography[heading=bibintoc]
+
+\appendix
+\input{Appendix.tex}
+\input{Progress.tex}
+\end{document}
